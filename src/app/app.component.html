@@ -1,3 +1,13 @@
 <jed-header></jed-header>
 
+<jed-student [student]="luke"></jed-student>
+<jed-student [student]="leia"></jed-student>
+<jed-student [student]="han"></jed-student>
+
+<hr>
+
+<jed-student *ngFor="let student of students" [student]="student"></jed-student>
+
+<hr>
+
 <jed-student></jed-student>

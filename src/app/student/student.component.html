@@ -1,14 +1,16 @@
-<div>
-    Student: Luke Skywalker
-    <div>
-        Jedi Temple: Coruscant
+<div *ngIf="student; else teste">
+    Student: <a href="#" (click)="clicked()">{{student.name}}</a>
+    <div *ngIf="student.isJedi">
+        Jedi Temple: {{student.temple}}
     </div>
-</div>
 
-<div>
-    Student: Han Solo
+    <button (click)="desc.value='teste'">FOCUS!</button>
+    <br>
+    <textarea #desc></textarea>
 </div>
+<ng-template #teste>
+    <p>
+        No data to show!
+    </p>
+</ng-template>
 
-<div>
-    Student: Leia
-</div>
